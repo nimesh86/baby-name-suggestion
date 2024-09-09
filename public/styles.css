@@ -1,0 +1,53 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure form inputs take full width on mobile devices */
+  input, button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  /* Style for name list */
+  #namesList, #pollList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #namesList li, #pollList li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Responsive container for mobile */
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+  
+    input, button {
+      font-size: 16px;
+    }
+  }
+  

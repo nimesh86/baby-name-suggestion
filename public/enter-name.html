@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter Your Name</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Please Enter Your Name</h1>
+  <div>
+    <label for="userNameInput">Your Name:</label>
+    <input type="text" id="userNameInput" placeholder="Enter your name" required />
+    <button id="submitNameBtn">Submit</button>
+  </div>
+
+  <script>
+    document.getElementById('submitNameBtn').addEventListener('click', () => {
+      const userName = document.getElementById('userNameInput').value.trim();
+
+      if (userName) {
+        localStorage.setItem('userName', userName); // Save name in localStorage
+        window.location.href = 'index.html'; // Redirect to main page
+      } else {
+        alert('Please enter your name!');
+      }
+    });
+  </script>
+</body>
+</html>
